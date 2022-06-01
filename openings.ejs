@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Openings</title>
+    </head>
+    <style>
+        a:visited {
+            color: rgb(118, 118, 118);
+        }
+    </style>
+    <body style="background-image:linear-gradient(60deg, rgb(31,11,148), rgb(174, 0, 255)); min-height: 50vw; font-family: 'Century Gothic'; color: white;">
+        <div style="display:flex; align-items: center; justify-content: center;">
+        logged in as: <%= usrname %>
+        </div>
+        <div style="display:flex; align-items: center; justify-content: center;">
+        <h1>Available Openings</h1>
+        </div>
+        <div
+            style="display:flex; align-items: center; justify-content: center; flex-direction: column; padding: 50px; padding-top: 25px;">
+        <div style="background-color: rgb(36, 36, 36); color: white; padding: 20px; border-radius: 25px;">
+        <a href="/fulltime?usrname=<%=usrname%>">Fulltime Jobs</a><br><br>
+        <a href="internships?usrname=<%=usrname%>">Internships</a>
+        </div> 
+        </div>      
+    </body>
+</html>

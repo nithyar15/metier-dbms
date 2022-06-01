@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Dashboard</title>
+    </head>
+
+    <body>
+        
+        <% if (mtype == "incorr") { %>
+            <h3 style="color:red">
+                <%= message %>
+            </h3>
+            <a href="login">Try logging in again</a> <br><br>
+            <a href="signup">Sign up if you're new!</a>
+        } %>
+        <% if (mtype=="error" ) { %>
+            <h3 style="color:green">
+                <%= message %>
+            </h3>
+        
+            <% } else { %>
+                <h3>Welcome to Metier!
+                        Username: <%= person.username %>
+                        <!--Age: <%= person.age %>
+                        Email: <%= person.email %>
+                        Type: <%= person.type %>--> </h3>
+            <% } %>
+            
+    </body>
+</html>

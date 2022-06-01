@@ -1,0 +1,16 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>Show</title>
+    </head>
+    <body>
+        <% if (type == "error") { %>
+            <h3 style="color:green"><%= message %></h3>
+        <% } else { %>
+            <h3>Name: <%= person.name %> 
+                Age: <%= person.age %>
+                Nationality: <%= person.nationality %> added! </h3>
+        <% } %>
+    </body>
+   
+</html>
