@@ -16,12 +16,13 @@
         style="display:flex; align-items: center; justify-content: center; flex-direction: column; padding: 50px; padding-top: 25px;">
         <div style="background-color: rgb(36, 36, 36); color: white; padding: 25px; border-radius: 25px;">
     <form action="/application" method="post">
+        <input name="comp" type="text" value="<%= info %>" style="display:none;">
         <label for="usrname">Your Name:</label>
         <input name="usrname" type="text" value="<%=usrname%>" class="form-control" style="background-color: rgb(36, 36, 36); margin:5px;"> <br>
         <label for="pos">Desired Position: </label>
         <input name="pos" type="text" class="form-control" style="background-color: rgb(36, 36, 36); margin:5px;"> <br>
         <label for="resume">Your Resume: </label> <br>
-        <input type="file" name="resume"> <br><br>
+        <input type="text"  class="form-control" style="background-color: rgb(36, 36, 36); margin:5px;" name="resume"> <br><br>
         <center><button type="submit">Submit Application</button></center>
         
     </form>

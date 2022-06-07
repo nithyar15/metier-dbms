@@ -22,7 +22,7 @@
                 <tr>
                     <th>Category ID</th>
                     <th>Category</th>
-                    
+                    <th>Apply now</th>
                 </tr>
             </thead>
             <tbody style="font-size:small;">
@@ -33,6 +33,13 @@
                         </td>
                         <td>
                             <%= categories.job_type %>
+                        </td>
+                        <td>
+                            <form action="/categories" method="post">
+                                <input name="category" type="text" value="<%= categories.job_type %>" style="display:none;">
+                                <input name="usrname" type="text" value="<%= usrname %>" style="display:none;">
+                                <button type="submit" class="btn btn-light" style="font-size:small;">View Openings</button>
+                            </form>
                         </td>
             
                         <% }) %>

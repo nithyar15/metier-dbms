@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>University Added</title>
+</head>
+
+<body>
+
+    <% if (mtype=="error" ) { %>
+        <h3 style="color:red">
+            <%= message %>
+        </h3>
+
+        <% } %>
+            <% if (mtype=="error" ) { %>
+                <h3 style="color:green">
+                    <%= message %>
+                </h3>
+
+                <% } else { %>
+                    <h3>Your opening will be displayed to users! <br> </h3>
+                    University Name: <%= person.u_name %> <br>
+                        City: <%= person.city %> <br>
+                
+
+                                <form action="/univadd" method="post">
+                                    <input name="uni" type="text" value="<%= person.u_name %>" style="display:none;">
+                                    <button type="submit">Back to Dashboard</button>
+                                </form>
+
+                                <% } %>
+
+</body>
+
+</html>

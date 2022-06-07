@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Job Openings</title>
+    </head>
+    <body>
+        <h1>Job Openings</h1>
+        <% category.forEach(category=> {%>
+        
+            <%= category.c_name%>
+            <br>
+            <%= category.city%>
+            <br>
+            <%= category.qualification%>
+            <form action="/category_openings" method="post">
+                <input name="comp" type="text" value="<%= category.c_name %>" style="display:none;">
+                <input name="name" type="text" value="<%= usrname %>" style="display:none;">
+                <button type="submit" class="btn btn-light" style="font-size:small;">Apply</button>
+            
+            </form>
+            <br><br>
+
+        <% }) %>
+    </body>
+</html>

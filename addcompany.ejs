@@ -5,40 +5,44 @@
     <title>Add Company</title>
 </head>
 
-<body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<body style="background-image:linear-gradient(60deg, rgb(31,11,148), rgb(174, 0, 255)); min-height: 50vw;">
+    <div
+        style="display:flex; align-items: center; justify-content: center; flex-direction: column; padding: 50px; padding-top: 25px;">
+        <div style="background-color: rgb(36, 36, 36); color: white; padding: 25px; border-radius: 25px;">
     <form action="/addcompany" method="POST">
-        <div>
-            <label for="c_id">Company ID: </label>
-            <input name="c_id">
-            <br><br>
-        </div>
+        
         <div>
             <label for="c_name">Company Name: </label>
-            <input name="c_name">
+            <input name="c_name" class="form-control" style="background-color: rgb(36, 36, 36); margin:5px;">
             <br><br>
         </div>
         <div>
             <label for="category">Job Category: </label>
-            <input name="category">
+            <input name="category" class="form-control" style="background-color: rgb(36, 36, 36); margin:5px;">
             <br><br>
         </div>
         <div>
             <label for="type">Type: </label>
-            <input name="type">
+            <input name="type" class="form-control" style="background-color: rgb(36, 36, 36); margin:5px;">
             <br><br>
         </div>
         <div>
             <label for="city">City: </label>
-            <input name="city">
+            <input name="city" class="form-control" style="background-color: rgb(36, 36, 36); margin:5px;">
             <br><br>
         </div>
         <div>
             <label for="qualification">Expected Qualifications: </label>
-            <input name="qualification">
+            <input name="qualification" class="form-control" style="background-color: rgb(36, 36, 36); margin:5px;">
             <br><br>
         </div>
-        <button type="submit">Create Opening</button>
+        <center><button type="submit">Create Opening</button></center>
     </form>
+    </div>
+    </div>
 </body>
 
 </html>

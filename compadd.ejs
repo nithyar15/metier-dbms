@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Dashboard</title>
+    <title>Company Added</title>
 </head>
 
 <body>
@@ -23,6 +23,12 @@
                     Company Name: <%= person.c_name %> <br>
                     City: <%= person.city %> <br>
                     Type: <%= person.type %> <br>
+                    
+
+                    <form action="/compadd" method="post">
+                        <input name="comp" type="text" value="<%= person.c_name %>" style="display:none;">
+                        <button type="submit">Back to Dashboard</button>
+                    </form>
                 
                 <% } %>
 
