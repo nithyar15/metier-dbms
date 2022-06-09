@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html>
+
     <head>
-        <title>Job Openings</title>
+        <title>Fulltime Jobs</title>
     </head>
+    <link rel="stylesheet" href="css/categories.css">
+    <script>
+        function submitvals(a) {
+            a.getElementsByTagName('form')[0].submit();
+        }
+    </script>
+
     <body>
+        <ul>
+            <li onclick=history.back()>Back</li>
+            <li style="float:right; border-radius: 50px; background-color: aliceblue; color: black;">
+                <%= usrname %>
+            </li>
+        </ul>
+        <div class="outer">
+            <div class="inner">
         <h1>Job Openings</h1>
         <% category.forEach(category=> {%>
-        
+            <div class="listings" onclick="submitvals(this)">
+                <h2>
             <%= category.c_name%>
-            <br>
+            </h2>
+            <p>
             <%= category.city%>
-            <br>
+            </p>
+            <p>
             <%= category.qualification%>
+            </p>
             <form action="/category_openings" method="post">
-                <input name="comp" type="text" value="<%= category.c_name %>" style="display:none;">
-                <input name="name" type="text" value="<%= usrname %>" style="display:none;">
-                <button type="submit" class="btn btn-light" style="font-size:small;">Apply</button>
-            
+                <input name="comp" type="hidden" value="<%= category.c_name %>">
+                <input name="name" type="hidden" value="<%= usrname %>">
             </form>
-            <br><br>
-
+            </div>
         <% }) %>
+            </div>
+            </div>
     </body>
 </html>
