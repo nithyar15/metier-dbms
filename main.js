@@ -7,6 +7,14 @@ app.use(express.urlencoded());
 
 var port=3000;
 
+/////////////////////////////////
+//static files///
+app.use(express.static('public'));
+app.use('/css', express.static(__dirname + 'public/css'));
+app.use('/html', express.static(__dirname + 'public/html'));
+app.use('/js', express.static(__dirname + 'public/js'));
+/////////////////////////////////
+
 let date_ob = new Date();
 
 // current date
