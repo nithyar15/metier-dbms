@@ -1,0 +1,78 @@
+html {
+    background: linear-gradient(60deg, rgb(24, 21, 32), rgb(34, 24, 69)) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+      margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  color: white;
+  font-family: 'Century Gothic';
+}
+
+.outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    padding-top: 25px;
+}
+
+.inner {
+    padding: 0px 50px 20px 20px;
+    border-radius: 25px;
+    transition: padding 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    display:block;
+    height: 50px;
+    width: 50px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    margin: 14px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: font-size 500ms;
+}
+
+a:hover {
+    color: pink;
+    font-size: 25px;
+}
+
+h1 {
+    font-size: 70px;
+}
